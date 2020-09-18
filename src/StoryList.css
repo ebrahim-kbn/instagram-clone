@@ -1,0 +1,52 @@
+.storyList {
+  display: flex;
+  overflow-x: auto;
+  max-width: calc(100vw - 20px);
+  border: 1px solid lightgray;
+  margin-bottom: 3rem;
+  padding: 10px;
+}
+/* .storyList__item {
+  border: 2px solid;
+  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+  padding: 3px;
+  border-radius: 50%;
+} */
+.storyList__itemAvatar {
+  padding: 2px;
+  border-radius: 50%;
+  background-color: white;
+}
+.storyList__item {
+  position: relative;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  background: linear-gradient(orange, violet);
+  background-clip: padding-box;
+  padding: 2px;
+}
+
+.storyList__item::after {
+  position: absolute;
+  top: -3px;
+  bottom: -3px;
+  left: -3px;
+  right: -3px;
+  background: linear-gradient(red, blue);
+  content: "";
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.storyList > .MuiAvatar-root {
+  margin-right: 10px;
+  width: 60px;
+  height: 60px;
+  /* border: 2px solid purple; */
+}
+
+@media screen and (min-width: 520px) {
+  .storyList {
+    max-width: 500px;
+  }
+}

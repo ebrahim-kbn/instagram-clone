@@ -1,38 +1,78 @@
-.App {
-  text-align: center;
+.app {
+  background-color: #fafafa;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app__header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: white;
+  padding: 10px 20px;
+  border-bottom: 1px solid lightgray;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+}
+.app__headerImage {
+  object-fit: contain;
+}
+
+.app__posts {
+  padding: 10px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.app__postsRight {
+  margin-left: 10px;
+  display: none;
+}
+@media screen and (min-width: 860px) {
+  .app__postsRight {
+    display: block;
+  }
 }
 
-.App-link {
-  color: #61dafb;
+.app__headerLeft {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.app__headerSearch {
+  display: none;
+  align-items: center;
+  border: 1px solid lightgray;
+  background-color: #fafafa;
+}
+.app__headerSearch > input {
+  border: none;
+  outline: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.app__headerSearch > .MuiSvgIcon-root {
+  color: gray;
+}
+
+@media screen and (min-width: 530px) {
+  .app__headerSearch {
+    display: flex;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.app__headerRight {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.app__headerRight > .MuiSvgIcon-root {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+.app__headerRight > .MuiAvatar-root {
+  width: 30px;
+  height: 30px;
+}
+
+.storyContainer {
+  padding: 10px;
 }
